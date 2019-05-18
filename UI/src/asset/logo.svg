@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148.173" height="39.177" viewBox="0 0 148.173 39.177">
+  <g id="logo" transform="translate(-140 -34.417)">
+    <text id="_AutoSmart" data-name="AutoSmart" transform="translate(140 60)" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" fill="#00cc80"><tspan x="10" y="0">Auto</tspan></text>
+    <text id="_Smart" data-name="AutoSmart" transform="translate(140 60)" font-size="24" font-family="Montserrat-Bold, Montserrat" font-weight="700" fill="#00c2ff"><tspan x="60" y="0">Smart</tspan></text>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="7.158" height="20.152" rx="3.079" transform="translate(282.632 34.417) rotate(45)" fill="#00c2ff"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="10.158" height="20.152" rx="3.079" transform="translate(283.819 44.997) rotate(45)" fill="#00cc80"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="7.158" height="20.152" rx="3.079" transform="translate(283.819 44.997) rotate(120)" fill="#00cc80"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="7.158" height="20.152" rx="3.079" transform="translate(283.819 44.997) rotate(60)" fill="#00c2ff"/>
+  </g>
+</svg>
