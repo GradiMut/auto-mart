@@ -11,7 +11,7 @@ const app = express();
 // Parse incoming request
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/auto-mart', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
+app.use('/auto-mart/doc', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 app.get('/', (req, res) => res.status(200).json({
   message: 'Welcome to AutoMart',
 }));
