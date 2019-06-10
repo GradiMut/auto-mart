@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-// Start tabs.js
 (function() {
   "use strict";
 
