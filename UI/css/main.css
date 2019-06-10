@@ -16,7 +16,6 @@ header {
     background: #ffffff;
     padding-top: 10px;
     min-height: 70px;
-    /* border-bottom: #000000 3px solid; */
 }
 
 header nav {
@@ -43,6 +42,10 @@ header li {
 
 header nav a:hover {
     color: #00cc80;
+    border-bottom: #00cc80 3px solid;
+}
+header nav a:hover {
+    color:#00c2ff;;
     border-bottom: #00cc80 3px solid;
 }
 
@@ -357,6 +360,7 @@ header nav a:hover {
 .card {
     border: 1px solid #d3d3d3;
     border-radius: .25rem;
+    box-shadow: 0 0 2px #d3d3d3;
 }
 
 .card :hover {
@@ -382,7 +386,10 @@ header nav a:hover {
     background-size: cover;
     min-height: 180px;
     background-position: center;
-    background-image: url(../src/asset/drawing.svg);
+}
+.bg-img img {
+    height: 180px;
+    width: 100%;
 }
 
 button {
@@ -408,7 +415,6 @@ section .card .bg-img {
     background-size: cover;
     min-height: 180px;
     background-position: center;
-    background-image:url("../src/asset/drawing.svg");
 }
 section .card .content {
     padding: 15px;
@@ -468,7 +474,6 @@ hr {
     background-size: cover;
     min-height: 180px;
     background-position: center;
-    background-image: url(../src/asset/drawing.svg);
 }
 
 .container .content-dash button {
@@ -482,16 +487,31 @@ hr {
 
 /* Responsive Screen*/
 
-@media only screen and (min-width: 650px) {
-    
+@media only screen and (max-width: 650px) {
+    header a img{
+        float:  none;
+        padding-left:
+        text-d 
+    }
+    header li {
+        padding: 0 0px 0 0px;
+        text-align:  center;
+    }
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
 }
 
 @media only screen and (min-width: 875px) {
-
+    
 }
 
 @media only screen and (min-width: 1024px) {
-
+    
 }
 
 @media only screen and (min-width: 1600px) {
