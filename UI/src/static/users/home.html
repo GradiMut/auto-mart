@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="GradiMut">
+    <title>Auto Mart | Home</title>
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <a href="../users/home.html">
+            <img src="../../asset/logo.svg">
+        </a>
+
+        <nav>
+            <ul class="show-desktop hide-mobile">
+                <li><a href="client/post_car.html">POST NOW</a></li>
+                <li><a href="./client/dashboard.html">PROFILE</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+
+        <section>
+            <div class="container">
+
+                <div class="forms-search">
+                    <h3>FILTER SEARCH</h3>
+                    <form action="#">
+                        <div class="input-field">
+                            <select name="category" id="price" class="form-control">
+                                <option value="all">All</option>
+                                <option value="used">Used</option>
+                                <option value="new">New</option>
+                            </select>
+                            <select name="minPrice" id="minPrice" class="form-control">
+                                <option value="">Min Price Range</option>
+                                <option value="10000">10000</option>
+                                <option value="20000">20000</option>
+                            </select>
+                            <select name="maxPrice" id="maxPrice" class="form-control">
+                                <option value="">Max Price Range</option>
+                                <option value="10000">10000</option>
+                                <option value="20000">20000</option>
+                            </select>
+                            <select name="manufacture" id="manufacture" class="form-control">
+                                <option value="">Manufacture (Make) </option>
+                                <option value="one">Manufacture 1</option>
+                                <option value="two">Manufacture 2</option>
+                            </select>
+                            <button>SEARCH</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <br>
+
+        <div class="container">
+            <h3>CAR BODY TYPE</h3><br>
+            <div class="grid-container">
+
+                <div class="card" onclick="location.href='../users/client/singleItem.html'">
+                    <div class="bg-img">
+                        <img src="../../asset/drawing-2.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <h4>TOYOTA</h4>
+                        <h4>125.000</h4>
+                        <br>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <br>
+                        <button onclick="location.href='../users/client/singleItem.html'">PURCHASE NOW</button>
+                        <button class="reportForm">REPORT AD</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <!-- Footer tag -->
+    </div>
+</body>
+
+</html>
