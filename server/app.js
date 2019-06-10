@@ -1,7 +1,7 @@
 // jshint esversion: 6
 const express = require('express');
-// const swaggerUI = require('swagger-ui-express');
-// const swaggerDoc = require('swagger.json')
+const swaggerUI = require('swagger-ui-express');
+const swaggerDoc = require('https://app.swaggerhub.com/apis/GradiMut/AutoMart/1.0.0#/')
 const router = require('./src/routes');
 
 
@@ -11,6 +11,11 @@ const app = express();
 // Parse incoming request
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use('/auto-mart', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
+app.get('/', (req, res) => res.status(200).json({
+  message: 'Welcome to AutoMart',
+}));
+
 app.use(router);
 
 const PORT = process.env.PORT || 3000;
