@@ -1,7 +1,7 @@
 // jshint esversion: 6
 const express = require('express');
 const swaggerUI = require('swagger-ui-express');
-const swaggerDoc = require('https://app.swaggerhub.com/apis/GradiMut/AutoMart/1.0.0#/')
+const swaggerDoc = require('./src/swagger.json');
 const router = require('./src/routes');
 
 

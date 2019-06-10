@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
+    "dev": "npm run dev",
     "test": "node ./node_modules/mocha/bin/mocha",
     "start": "mocha --require @babel/register --timeout 10000 --exit test/*js || true",
     "cover": "istanbul cover _mocha",
