@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/data/cars.js"],"names":["carDb","module","exports"],"mappings":";;AAAA;AACA,IAAMA,KAAK,GAAG,EAAd;AAEAC,MAAM,CAACC,OAAP,GAAiBF,KAAjB","sourcesContent":["// jshint esversion: 6\nconst carDb = [];\n\nmodule.exports = carDb;\n"],"file":"cars.js"}

@@ -7,7 +7,10 @@
     "lint": "eslint",
     "dev": "npm run dev",
     "test": "node ./node_modules/mocha/bin/mocha",
-    "start": "mocha --require @babel/register --timeout 10000 --exit test/*js || true",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js && mocha --require @babel/register --timeout 10000 --exit test/*js || true",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
