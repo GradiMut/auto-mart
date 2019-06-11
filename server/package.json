@@ -10,7 +10,7 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js && mocha --require @babel/register --timeout 10000 --exit test/*js || true",
+    "start": "node app.js",
     "cover": "istanbul cover _mocha",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
     "coveralls-coverage": "coveralls < lcov.info",
