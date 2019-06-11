@@ -43,22 +43,22 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 ### Language
 
-```*Javascript*
+```Javascript
 ```
 
 ### Server Environment
 
-``` *NodeJS* (run time Environment for running JS codes)
+``` NodeJS (run time Environment for running JS codes)
  ```
 
 ### Framework
 
-``` *Express* (used for building fast APIs)
+``` Express (used for building fast APIs)
  ```
 
 ### Testing Framework and assertion library
 
-``` *Mocha* and *Chai*
+``` Mocha and Chai
  ```
 
 ### Continuous Integration
@@ -80,7 +80,7 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 ```Heroku```
 
 ### Heroku link Example
-[AutoMart heroku link](https://automart-andela-challenge.herokuapp.com)
+[AutoMart heroku link](https://automart-andele-bc7.herokuapp.com/)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
