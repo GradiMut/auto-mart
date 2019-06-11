@@ -43,22 +43,22 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 ### Language
 
-```Javascript
+```*Javascript*
 ```
 
 ### Server Environment
 
-``` NodeJS (run time Environment for running JS codes)
+``` *NodeJS* (run time Environment for running JS codes)
  ```
 
 ### Framework
 
-``` Express (used for building fast APIs)
+``` *Express* (used for building fast APIs)
  ```
 
 ### Testing Framework and assertion library
 
-``` Mocha and Chai
+``` *Mocha* and *Chai*
  ```
 
 ### Continuous Integration
