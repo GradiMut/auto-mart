@@ -519,6 +519,30 @@ hr {
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-transition: all 0.4s ease-in-out;
+}
+.forms-post textarea {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-transition: all 0.4s ease-in-out;
 }
 
 .forms-post select {
@@ -680,6 +704,49 @@ hr {
     border-radius: .25rem;
 
 }
+
+
+
+/* Footer style*/
+.footer-container {
+    width: 100%;
+    background: #3D444A;
+    color: #fff;
+    padding: 3em 0;
+}
+
+.footer-container .container {
+    text-align:  center;
+    
+}
+
+.footer-container:before {
+    width: 40px;
+    height: 40px;
+    background-color: #3D444A;
+    position: absolute;
+    left: 0;
+}
+
+.footer-container:after {
+    width: 80px;
+    position: absolute;
+    left: 0;
+}
+
+ul.footer-links {
+    margin: 0 auto;
+}
+
+ul.footer-links li {
+    display: inline-block;
+}
+
+ul.footer-links li a {
+    color: #9D9D9D;
+    font-size: .8em;
+}
+
 
 
 /* Responsive Screen*/
