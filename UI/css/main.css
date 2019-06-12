@@ -371,6 +371,7 @@ header nav a:hover {
 
 .content {
     padding: 15px;
+    text-align:  center;
 }
 .content .head {
     display: inline;
@@ -379,14 +380,12 @@ header nav a:hover {
 .content h4{
     text-align:  left;
     align-content: center;
-    color: #00c2ff;
     display: inline;
     position: relative;
 }
 .content p{
     text-align:  left;
     align-content: center;
-    color: #00c2ff;
     display: inline;
     position: relative;
 }
