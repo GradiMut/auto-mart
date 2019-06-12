@@ -57,12 +57,13 @@ header nav a:hover {
     float: left;
     text-align: justify;
     width: 50%;
-    padding-top: 25px;
+    padding-top: 130px;
 }
 
 #about_us #info p {
     line-height: 1.5;
     font-family:  monospace;
+    padding-top: 20px;
 }
 
 #about_us #info-img {
