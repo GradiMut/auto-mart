@@ -4,6 +4,7 @@ body {
     line-height: 1.0;
     padding: 0;
     margin: 0;
+    /* background-color: #f2fbf2; */
 }
 
 .container {
@@ -359,9 +360,9 @@ header nav a:hover {
 }
 
 .card {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
-    box-shadow: 0 0 2px #d3d3d3;
+    box-shadow: 0 0 3px #00c2ff;
 }
 
 .card :hover {
@@ -378,7 +379,14 @@ header nav a:hover {
 .content h4{
     text-align:  left;
     align-content: center;
-    color: #00cc80;
+    color: #00c2ff;
+    display: inline;
+    position: relative;
+}
+.content p{
+    text-align:  left;
+    align-content: center;
+    color: #00c2ff;
     display: inline;
     position: relative;
 }
@@ -387,6 +395,8 @@ header nav a:hover {
     background-size: cover;
     min-height: 180px;
     background-position: center;
+    box-shadow: 0 0 4px #00c2ff;
+    border-bottom: #fff 2px solid;
 }
 .bg-img img {
     height: 180px;
@@ -394,11 +404,14 @@ header nav a:hover {
 }
 
 button {
-    background-color: transparent;
-    border: 1px solid #2196F3;
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
+    box-shadow: 0 0 3px #00c2ff;
     padding: .5rem 1rem;
     cursor: pointer;
     border-radius: .25rem;
+    color: #ffffff;
+    margin-top: 10px;
 }
 
 /* Model */
@@ -437,7 +450,7 @@ button {
 
 /* Style for single item pages */
 section .card {
-    border: 1px solid #00cc80;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
     width:  50%;
     text-align:  center;
@@ -455,11 +468,109 @@ section .card .content {
 }
 
 hr {
-    border:  1px solid #00cc80;
+    border: 1px solid #00c2ff;
 }
 
 .update-price {
     text-align:  center;
+}
+
+/* Post add car */
+.forms-post {
+    background: #fff;
+    box-shadow: 0 0 3px #000;
+    margin: 30px auto;
+    max-width: 700px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.forms-post h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00c2ff;
+    text-align: center;
+}
+
+.forms-post form {
+    padding: 20px;
+    
+}
+.forms-post .input-field1 {
+    float: left;
+}
+.forms-post .input-field2 {
+    float: right;
+}
+.forms-post .input-field3 {
+    float: left;
+}
+
+.forms-post input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.forms-post select {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.forms-post select:focus {
+    outline: 0;
+    border-color: #00c2ff;
+}
+
+.forms-post input:focus {
+    outline: 0;
+    border-color: #00c2ff;
+}
+
+.forms-post label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.forms-post .button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #00c2ff;
+    color: #ffffff;
+    cursor: pointer;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 /* Client Dashboard */

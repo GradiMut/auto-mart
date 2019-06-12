@@ -27,14 +27,13 @@
     
     <div class="container">
 
-        <div class="forms">
-            <div class="tab-group" style="margin: 10px">
+        <div class="forms-post">
+            <div  style="margin: 10px">
                 <h2>POST AD</h2>
             </div>
 
             <form action="#" id="post_ad">
-                <div class="input-field">
-
+                <div class="input-field1">
                     <label for="imgCar">CAR IMAGE</label>
                     <input type="file" name="imgCar" accept="image/*" multiple required class="form-control" />
 
@@ -44,12 +43,12 @@
                     <label for="manufacture">MANUFACTURE</label>
                     <input type="text" name="fname" required class="form-control" />
 
-                    <label for="state">STATE</label>
-                    <select name="state" id="status" class="form-control">
-                        <option value="new">NEW</option>
-                        <option value="used">USED</option>
-                    </select>
+                    <label for="engine_size">ENGINE SIZE</label>
+                    <input type="text" name="engine_size" required class="form-control" />
 
+                </div>
+
+                <div class="input-field2">
                     <label for="status">STATUS</label>
                     <select name="status" id="status" class="form-control">
                         <option value="available">AVAILABLE</option>
@@ -64,18 +63,21 @@
                         <option value="van">VAN</option>
                     </select>
 
-                    <label for="engine_size">ENGINE SIZE</label>
-                    <input type="text" name="engine_size" required class="form-control" />
+                    <label for="state">STATE</label>
+                    <select name="state" id="status" class="form-control">
+                        <option value="new">NEW</option>
+                        <option value="used">USED</option>
+                    </select>
 
                     <label for="price">PRICE</label>
                     <input type="number" name="price" required class="form-control" />
-
+                </div>
+                <div class="input-field3">
                     <label for="desc">DESCRIPTION</label>
                     <textarea name="desc" id="desc" cols="53" rows="10" class="form-control"></textarea>
                     <br><br>
-
-                    <input type="submit" value="POST NOW" class="button" />
                 </div>
+                    <input type="submit" value="POST NOW" class="button" />
             </form>
         </div>
 
