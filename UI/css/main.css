@@ -573,6 +573,46 @@ hr {
     transition: all 0.4s ease-in-out;
 }
 
+/* admin Dashboard */
+.container .content-dash-admin {
+    margin-top: 40px;
+}
+
+.container .content-dash .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.container .content-dash-admin .card {
+    border: 1px solid #00c2ff;
+    border-radius: .25rem;
+}
+
+.container .content-dash-admin .content-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.container .content-dash-admin .card :hover {
+    cursor: pointer;
+}
+
+
+.container .content-dash-admin .bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+}
+
+.container .content-dash-admin button {
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+
+}
 /* Client Dashboard */
 .side-bar {
     margin: 0;
@@ -593,6 +633,7 @@ hr {
 
 .container .content-dash {
     margin-left: 200px;
+    margin-top: 40px;
 }
 
 .container .content-dash .grid-container {
@@ -602,12 +643,13 @@ hr {
 }
 
 .container .content-dash .card {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
 }
 
 .container .content-dash .content-card {
-    padding: 15px
+    padding: 15px;
+    text-align: center;
 }
 
 .container .content-dash .card :hover {
@@ -622,11 +664,12 @@ hr {
 }
 
 .container .content-dash button {
-    background-color: transparent;
-    border: 1px solid #2196F3;
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
     padding: .5rem 1rem;
     cursor: pointer;
     border-radius: .25rem;
+
 }
 
 
