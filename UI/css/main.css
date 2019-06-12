@@ -614,20 +614,30 @@ hr {
 }
 /* Client Dashboard */
 .side-bar {
-    margin: 0;
-    padding: 0;
+    margin-left: -33px;
+    margin-top: 1px;
     width: 200px;
     position: fixed;
     height: 100%;
     overflow: auto;
-    border-right: 1px solid #00cc80;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px ;
 }
 
 .side-bar a {
     display: block;
     padding: 16px;
+    margin-top: 10px;
     text-decoration: none;
-    color: #000
+    color: #000;
+}
+.side-bar a:hover {
+    color: #00cc80;
+}
+.side-bar .actived-one {
+    color: #00cc80;
+    border-left: #00cc80 3px solid;
+
 }
 
 .container .content-dash {
