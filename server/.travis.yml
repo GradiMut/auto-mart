@@ -7,8 +7,6 @@ branches:
 cache:
   directories:
     - "node_modules"
-before_script:
-  - npm run start
 script:
   - npm test
 after_success:
