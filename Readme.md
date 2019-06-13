@@ -43,26 +43,43 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 ### Language
 
-```Javascript```
+```*Javascript*
+```
 
 ### Server Environment
 
-```NodeJS```
+``` *NodeJS* (run time Environment for running JS codes)
+ ```
 
 ### Framework
 
-```Express```
+``` *Express* (used for building fast APIs)
+ ```
 
 ### Testing Framework and assertion library
 
-```Mocha and Chai```
+``` *Mocha* and *Chai*
+ ```
+
+### Continuous Integration
+
+```Travis CI
+```
+
+### Test Coverage
+
+```nyc
+```
+
+### Git badge
+
+```coveralls```
 
 ### Deployment
 
 ```Heroku```
 
 ### Heroku link Example
-
 [AutoMart heroku link](https://automart-andele-bc7.herokuapp.com/)
 
 ## Getting Started

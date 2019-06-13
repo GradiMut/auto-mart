@@ -141,7 +141,7 @@
                     "in": "body",
                     "description": "user that we want to create",
                     "schema": {
-                        "$ref": "#/definitions/singup"
+                        "$ref": "#/definitions/signup"
                     }
                 }],
                 "produces": [
