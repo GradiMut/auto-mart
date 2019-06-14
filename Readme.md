@@ -19,26 +19,26 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 ## API ENDPOINTS
 
-> ```/api/v1/getAllUsers```
-> ```/api/v1/getUserById/:id```
-> ```/api/v1/auth/singIn```
-> ```/api/v1/auth/singUp'```
-> ```/api/v1/updateUsers/:id```
-> ```/api/v1/deleteUsers/:id```
-> ```/api/v1/getAllCar```
-> ```/api/v1/getCarById/:id```
-> ```/api/v1/getCarByBodyType/:bodyType```
-> ```/api/v1/getCarByStatus/:status```
-> ```/api/v1/searchCarBy/:status/:min/:max/:make```
-> ```/api/v1/addCar```
-> ```/api/v1/updatePrice/:id```
-> ```/carController.markCarAsSold```
-> ```/api/v1/deleteCar/:id```
-> ```/api/v1/getAllOrder```
-> ```/api/v1/makeAnOffer```
-> ```/api/v1/updateOrderPrice/:id```
-> ```/api/v1/getAllFlag```
-> ```/api/v1/addFlag```
+```/api/v1/getAllUsers```
+```/api/v1/getUserById/:id```
+```/api/v1/auth/singIn```
+```/api/v1/auth/singUp'```
+```/api/v1/updateUsers/:id```
+```/api/v1/deleteUsers/:id```
+```/api/v1/getAllCar```
+```/api/v1/getCarById/:id```
+```/api/v1/getCarByBodyType/:bodyType```
+```/api/v1/getCarByStatus/:status```
+```/api/v1/searchCarBy/:status/:min/:max/:make```
+```/api/v1/addCar```
+```/api/v1/updatePrice/:id```
+```/carController.markCarAsSold```
+```/api/v1/deleteCar/:id```
+```/api/v1/getAllOrder```
+```/api/v1/makeAnOffer```
+```/api/v1/updateOrderPrice/:id```
+```/api/v1/getAllFlag```
+```/api/v1/addFlag```
 
 ### Language
 
