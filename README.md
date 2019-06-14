@@ -2,32 +2,23 @@
 
 > an online marketplace for automobilesof diverse makes, model or body type. With Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.
 
-## How to use this project
+## Features of this project
 
-> This project is devided into 2 main folder
-> Folder One : The Web client (UI) this part contain all the pages (User interface for the application)
-> UI folder is divided in 3 main folder : css, js and src.
+> User can sign up.
+> User can sign in.
+> User (seller) can post a car sale advertisement.
+> User (buyer) can make a purchase order.
+> User (buyer) can update the price of his/her purchase order.
+> User (seller) can mark his/her posted AD as sold.
+> User (seller) can update the price of his/her posted AD.
+> User can view a specific car.
+> User can view all unsold cars.
+> User can view all unsold cars within a price range.
+> Admin can delete a posted AD record.
+> Admin can view all posted ads whether sold or unsold.
 
-### css folder
+## To have this project just use
 
-> contain the css code for all the project
-
-### js folder
-
-> contain the javascript code for all the project
-
-### src folder
-
-> is divided into 3 folder (asset, static adn utils)
-
-#### asset folder
-
-> contain all the image used for the project.
-
-#### static folder
-
-> contain all the pages for the website
-
-### utils folder
-
-> contain all page errors
+> git clone [https://github.com/GradiMut/auto-mart.git]
+> just download it
+> for a better view i recommend google chrome

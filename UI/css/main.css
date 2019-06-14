@@ -4,6 +4,7 @@ body {
     line-height: 1.0;
     padding: 0;
     margin: 0;
+    /* background-color: #f2fbf2; */
 }
 
 .container {
@@ -16,6 +17,7 @@ header {
     background: #ffffff;
     padding-top: 10px;
     min-height: 70px;
+    box-shadow: 0 0 3px #000;
 }
 
 header nav {
@@ -42,10 +44,9 @@ header li {
 
 header nav a:hover {
     color: #00cc80;
-    border-bottom: #00cc80 3px solid;
 }
-header nav a:hover {
-    color:#00c2ff;;
+.actived {
+    color: #00cc80;
     border-bottom: #00cc80 3px solid;
 }
 
@@ -57,12 +58,13 @@ header nav a:hover {
     float: left;
     text-align: justify;
     width: 50%;
-    padding-top: 25px;
+    padding-top: 130px;
 }
 
 #about_us #info p {
     line-height: 1.5;
     font-family:  monospace;
+    padding-top: 20px;
 }
 
 #about_us #info-img {
@@ -358,9 +360,9 @@ header nav a:hover {
 }
 
 .card {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
-    box-shadow: 0 0 2px #d3d3d3;
+    box-shadow: 0 0 3px #00c2ff;
 }
 
 .card :hover {
@@ -369,6 +371,7 @@ header nav a:hover {
 
 .content {
     padding: 15px;
+    text-align:  center;
 }
 .content .head {
     display: inline;
@@ -377,7 +380,12 @@ header nav a:hover {
 .content h4{
     text-align:  left;
     align-content: center;
-    color: #00cc80;
+    display: inline;
+    position: relative;
+}
+.content p{
+    text-align:  left;
+    align-content: center;
     display: inline;
     position: relative;
 }
@@ -386,6 +394,8 @@ header nav a:hover {
     background-size: cover;
     min-height: 180px;
     background-position: center;
+    box-shadow: 0 0 4px #00c2ff;
+    border-bottom: #fff 2px solid;
 }
 .bg-img img {
     height: 180px;
@@ -393,17 +403,53 @@ header nav a:hover {
 }
 
 button {
-    background-color: transparent;
-    border: 1px solid #2196F3;
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
+    box-shadow: 0 0 3px #00c2ff;
     padding: .5rem 1rem;
     cursor: pointer;
     border-radius: .25rem;
+    color: #ffffff;
+    margin-top: 10px;
 }
 
+/* Model */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* Style for single item pages */
 section .card {
-    border: 1px solid #00cc80;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
     width:  50%;
     text-align:  center;
@@ -421,33 +467,206 @@ section .card .content {
 }
 
 hr {
-    border:  1px solid #00cc80;
+    border: 1px solid #00c2ff;
 }
 
 .update-price {
     text-align:  center;
 }
 
+/* Post add car */
+.forms-post {
+    background: #fff;
+    box-shadow: 0 0 3px #000;
+    margin: 30px auto;
+    max-width: 700px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.forms-post h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00c2ff;
+    text-align: center;
+}
+
+.forms-post form {
+    padding: 20px;
+    
+}
+.forms-post .input-field1 {
+    float: left;
+}
+.forms-post .input-field2 {
+    float: right;
+}
+.forms-post .input-field3 {
+    float: left;
+}
+
+.forms-post input {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-transition: all 0.4s ease-in-out;
+}
+.forms-post textarea {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-transition: all 0.4s ease-in-out;
+}
+
+.forms-post select {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 0;
+    margin-bottom: 10px;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.forms-post select:focus {
+    outline: 0;
+    border-color: #00c2ff;
+}
+
+.forms-post input:focus {
+    outline: 0;
+    border-color: #00c2ff;
+}
+
+.forms-post label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.forms-post .button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #00c2ff;
+    color: #ffffff;
+    cursor: pointer;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+/* admin Dashboard */
+.container .content-dash-admin {
+    margin-top: 40px;
+}
+
+.container .content-dash .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.container .content-dash-admin .card {
+    border: 1px solid #00c2ff;
+    border-radius: .25rem;
+}
+
+.container .content-dash-admin .content-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.container .content-dash-admin .card :hover {
+    cursor: pointer;
+}
+
+
+.container .content-dash-admin .bg-img {
+    background-size: cover;
+    min-height: 180px;
+    background-position: center;
+}
+
+.container .content-dash-admin button {
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border-radius: .25rem;
+
+}
 /* Client Dashboard */
 .side-bar {
-    margin: 0;
-    padding: 0;
+    margin-left: -33px;
+    margin-top: 1px;
     width: 200px;
     position: fixed;
     height: 100%;
     overflow: auto;
-    border-right: 1px solid #00cc80;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px ;
 }
 
 .side-bar a {
     display: block;
     padding: 16px;
+    margin-top: 10px;
     text-decoration: none;
-    color: #000
+    color: #000;
+}
+.side-bar a:hover {
+    color: #00cc80;
+}
+.side-bar .actived-one {
+    color: #00cc80;
+    border-left: #00cc80 3px solid;
+
 }
 
 .container .content-dash {
     margin-left: 200px;
+    margin-top: 40px;
 }
 
 .container .content-dash .grid-container {
@@ -457,12 +676,13 @@ hr {
 }
 
 .container .content-dash .card {
-    border: 1px solid #d3d3d3;
+    border: 1px solid #00c2ff;
     border-radius: .25rem;
 }
 
 .container .content-dash .content-card {
-    padding: 15px
+    padding: 15px;
+    text-align: center;
 }
 
 .container .content-dash .card :hover {
@@ -477,12 +697,56 @@ hr {
 }
 
 .container .content-dash button {
-    background-color: transparent;
-    border: 1px solid #2196F3;
+    background-color: #00c2ff;
+    border: 1px solid #00c2ff;
     padding: .5rem 1rem;
     cursor: pointer;
     border-radius: .25rem;
+
 }
+
+
+
+/* Footer style*/
+.footer-container {
+    width: 100%;
+    background: #3D444A;
+    color: #fff;
+    padding: 3em 0;
+}
+
+.footer-container .container {
+    text-align:  center;
+    
+}
+
+.footer-container:before {
+    width: 40px;
+    height: 40px;
+    background-color: #3D444A;
+    position: absolute;
+    left: 0;
+}
+
+.footer-container:after {
+    width: 80px;
+    position: absolute;
+    left: 0;
+}
+
+ul.footer-links {
+    margin: 0 auto;
+}
+
+ul.footer-links li {
+    display: inline-block;
+}
+
+ul.footer-links li a {
+    color: #9D9D9D;
+    font-size: .8em;
+}
+
 
 
 /* Responsive Screen*/
