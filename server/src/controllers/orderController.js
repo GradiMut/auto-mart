@@ -1,6 +1,9 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable class-methods-use-this */
 // jshint esversion: 6
 const orderDb = require('../data/orders');
+const userDb = require('../data/users');
+const { validateOrder } = require('../middleware/validation/order');
 
 class Order {
   // gett all offers
@@ -14,29 +17,16 @@ class Order {
 
   // make an order
   makeAnOffer(req, res) {
-    if (!req.body.buyer) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, You do not have an account!',
-      });
+    const { error } = validateOrder(req.body);
+    const user = userDb.find(u => u.id === req.body.buyer);
+
+    if (user) {
+      res.status(400).send('You can not purchase your own car');
+      return;
     }
-    if (!req.body.carId) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Car does not existe',
-      });
-    }
-    if (!req.body.price) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Amount is required',
-      });
-    }
-    if (!req.body.status) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Status is required',
-      });
+    if (error) {
+      res.status(400).send(error.details[0].message);
+      return;
     }
 
     const currentDate = new Date();
@@ -44,16 +34,16 @@ class Order {
 
     const order = {
       id: orderDb.length + 1,
-      buyer: req.body.buyer,
-      carId: req.body.carId,
-      price: req.body.amount,
-      priceOffered: req.body.priceOffered,
+      buyer: parseInt(req.body.buyer, 10),
+      carId: parseInt(req.body.carId, 10),
+      price: parseInt(req.body.price, 10),
+      priceOffered: parseInt(req.body.priceOffered, 10),
       status: 'pending',
       createdOn: date,
     };
 
     orderDb.push(order);
-    return res.status(201).send({
+    res.status(201).send({
       status: 201,
       message: 'Your offer has been made',
       order,
