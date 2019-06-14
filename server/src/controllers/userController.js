@@ -1,10 +1,12 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 /* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 // jshint esversion: 6
 
 const jwt = require('jsonwebtoken');
 const userDb = require('../data/users');
-const { validateUserSignup, validateUserSingIn} = require('../middleware/validation/users')
+const { validateUserSignup, validateUserSingIn } = require('../middleware/validation/users');
 
 class User {
   getAllUsers(req, res) {
@@ -53,6 +55,7 @@ class User {
         error: 'Incorrect password',
       });
     }
+
     const userToken = {
       id: userFound.id,
       firstName: userFound.firstName,
@@ -61,7 +64,7 @@ class User {
       isAdmin: userFound.isAdmin,
     };
     const token = jwt.sign(userToken, 'SECRET_KEY', { expiresIn: '24hrs' });
-    res.status(200).json({
+    res.header(token).status(200).set('authorization', token).json({
       status: 200,
       data: {
         token,
@@ -81,8 +84,8 @@ class User {
     }
 
     if (userFound) {
-      res.status(403).json({
-        status: 403,
+      res.status(400).send({
+        status: 400,
         error: 'Email exist already',
       });
     }

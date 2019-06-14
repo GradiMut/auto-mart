@@ -1,7 +1,9 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable class-methods-use-this */
 // jshint esversion: 6
 const orderDb = require('../data/orders');
-const { validateOrder, validateUpdatePrice } = require('../middleware/validation/order');
+const userDb = require('../data/users');
+const { validateOrder } = require('../middleware/validation/order');
 
 class Order {
   // gett all offers
@@ -16,7 +18,12 @@ class Order {
   // make an order
   makeAnOffer(req, res) {
     const { error } = validateOrder(req.body);
+    const user = userDb.find(u => u.id === req.body.buyer);
 
+    if (user) {
+      res.status(400).send('You can not purchase your own car');
+      return;
+    }
     if (error) {
       res.status(400).send(error.details[0].message);
       return;

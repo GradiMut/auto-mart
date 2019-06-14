@@ -4,11 +4,11 @@ const Joi = require('joi');
 function validateAd(newAd) {
   const newAdSchema = {
     owner: Joi.number().required(),
-    make: Joi.string().required(),
-    model: Joi.string().required(),
-    price: Joi.number().required(),
     state: Joi.string().valid('new', 'used').required(),
     status: Joi.string().required(),
+    price: Joi.number().required(),
+    make: Joi.string().required(),
+    model: Joi.string().required(),
     bodyType: Joi.string().required(),
     imgUrl: Joi.string().required(),
     description: Joi.string().required(),

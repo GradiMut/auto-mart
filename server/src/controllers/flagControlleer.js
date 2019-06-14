@@ -2,10 +2,13 @@
 // jshint esversion: 6
 const flagDb = require('../data/flags');
 const validateFlag = require('../middleware/validation/flag');
+const userDb = require('../data/users');
+
 
 class Report {
   // gett all offers
   getAllReport(req, res) {
+    
     return res.status(200).send({
       status: 200,
       message: 'Success',

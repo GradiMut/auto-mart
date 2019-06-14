@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // jshint esversion : 6
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const chai = require('chai');
 const chaiHtpp = require('chai-http');
 const app = require('../app');
@@ -78,11 +78,16 @@ describe('Sing up a user', () => {
 //  update user
 describe('Update a user', () => {
   it('should update user record', (done) => {
+    // email: Joi.string().email().required(),
+    // firstName: Joi.string().min(3).required(),
+    // lastName: Joi.string().min(3).required(),
+    // password: Joi.string().min(6).max(12).required(),
+    // address: Joi.string().required(),
     const user = {
       id: 1,
       email: 'johndoe@gmail.com',
-      firstName: 'john',
-      lastName: 'doe',
+      firstName: 'johns',
+      lastName: 'does',
       password: 'johnpassword',
       address: 'Congo, DRC',
       isAdmin: true,

@@ -89,11 +89,18 @@ class Car {
   // Post a car
   postCar(req, res) {
     const { error } = validateAd(req.body);
+    const carF = carDb.find(c => c.description === req.body.description);
+    if (carF) {
+      res.status(401).send('Items already exist');
+      return;
+    }
+
 
     if (error) {
       res.status(400).send(error.details[0].message);
       return;
     }
+
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
     const car = {
