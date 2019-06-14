@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 // jshint esversion : 6
+const jwt = require('jsonwebtoken');
 const chai = require('chai');
 const chaiHtpp = require('chai-http');
 const app = require('../app');
@@ -39,14 +40,8 @@ describe('Get user by id', () => {
 describe('Sign in a user', () => {
   it('user should be able to singin', (done) => {
     const user = {
-      token: '45erkjherht45495783',
-      id: `${id}`,
       email: 'johndoe@gmail.com',
-      firstName: 'john',
-      lastName: 'doe',
       password: 'johnpassword',
-      address: 'Congo, DRC',
-      isAdmin: true,
     };
     chai.request(app)
       .post('/api/v1/auth/singIn')
@@ -63,8 +58,8 @@ describe('Sing up a user', () => {
   it('should add user record', (done) => {
     const user = {
       id: 1,
-      email: 'johndoe@gmail.com',
-      firstName: 'john',
+      email: 'johndoe2@gmail.com',
+      firstName: 'johnny',
       lastName: 'doe',
       password: 'johnpassword',
       address: 'Congo, DRC',
@@ -74,7 +69,7 @@ describe('Sing up a user', () => {
       .post('/api/v1/auth/singUp')
       .send(user)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -96,7 +91,7 @@ describe('Update a user', () => {
       .put(`/api/v1/updateUsers/${id}`)
       .send(user)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });

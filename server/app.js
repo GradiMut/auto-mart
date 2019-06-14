@@ -10,12 +10,13 @@ const carRouter = require('./src/routes/carRoute');
 
 // Set up the express app
 const app = express();
+// const auth = require('./src/middleware/auth');
+
 
 // Parse incoming request
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
-
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 app.use(userRouter);
 app.use(carRouter);
 app.use(orderRouter);

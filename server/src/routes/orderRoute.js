@@ -3,11 +3,11 @@
 const express = require('express');
 const orderController = require('../controllers/orderController');
 
-const router = express.Router();
+const orderRouter = express.Router();
 
 // order route
-router.get('/api/v1/getAllOrder', orderController.getAllOrders);
-router.post('/api/v1/makeAnOffer', orderController.makeAnOffer);
-router.patch('/api/v1/updateOrderPrice/:id', orderController.updateOrderPrice);
+orderRouter.get('/api/v1/getAllOrder', orderController.getAllOrders);
+orderRouter.post('/api/v1/makeAnOffer', orderController.makeAnOffer);
+orderRouter.patch('/api/v1/updateOrderPrice/:id', orderController.updateOrderPrice);
 
-module.exports = router;
+module.exports = orderRouter;

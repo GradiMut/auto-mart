@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 // jshint esversion: 6
 const flagDb = require('../data/flags');
+const validateFlag = require('../middleware/validation/flag');
 
 class Report {
   // gett all offers
@@ -8,54 +9,35 @@ class Report {
     return res.status(200).send({
       status: 200,
       message: 'Success',
-      orders: flagDb,
+      flags: flagDb,
     });
   }
 
-  // make an order
   reportAd(req, res) {
-    if (!req.body.userId) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, You do not have an account!',
-      });
-    }
-    if (!req.body.carId) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Car does not existe',
-      });
-    }
-    if (!req.body.reason) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Reason is required',
-      });
-    }
-    if (!req.body.description) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, description is required',
-      });
+    const { error } = validateFlag(req.body);
+
+    if (error) {
+      res.status(400).send(error.details[1].message);
+      return;
     }
 
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
 
-    const order = {
+    const flag = {
       id: flagDb.length + 1,
-      userId: req.body.userId,
-      carId: req.body.carId,
+      userId: parseInt(req.body.userId, 10),
+      carId: parseInt(req.body.carId, 10),
       reason: req.body.reason,
       description: req.body.description,
       createdOn: date,
     };
 
-    flagDb.push(order);
-    return res.status(201).send({
+    flagDb.push(flag);
+    res.status(201).send({
       status: 201,
       message: 'Your offer has been made',
-      order,
+      flag,
     });
   }
 }

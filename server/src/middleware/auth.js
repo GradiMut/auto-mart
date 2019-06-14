@@ -2,24 +2,24 @@
 const jwt = require('jsonwebtoken');
 
 const verifyToken = (req, res, next) => {
-  const checkHeader = req.headers.authorization;
-
-  if (typeof checkHeader !== 'undefined') {
-    const bearer = checkHeader.split(' ');
-    const token = bearer[1];
-    jwt.verify(token, 'secretkey', (err, encoded) => {
-      if (err) {
-        res.status(401).json({
-          status: 401,
-          data: 'Unauthorized access',
-        });
-      }
-      req.encoded = encoded;
-      next();
+  try {
+    const header = req.headers.authorization;
+    if (!header || header === '') {
+      return res.status(401).send({
+        status: 401,
+        error: 'Unauthorized',
+      });
+    }
+    const token = jwt.verify(header, 'SECRET_KEY');
+    req.user = token;
+    next();
+  } catch (e) {
+    return res.status(401).send({
+      status: 401,
+      error: e,
     });
-  } else {
-    res.status(403).json();
   }
 };
 
-exports.modules = verifyToken;
+
+module.exports = verifyToken;

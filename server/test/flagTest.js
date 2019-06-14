@@ -40,7 +40,8 @@ describe('Create a report(flag)', () => {
       .post('/api/v1/addFlag')
       .send(flag)
       .end((err, res) => {
-        res.should.have.status(200);
+        console.log(err);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
