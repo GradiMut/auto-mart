@@ -2,14 +2,10 @@
 const express = require('express');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDoc = require('./src/swagger.json');
-<<<<<<< HEAD
-const userRouter = require('./src/routes/userRoute');
-const orderRouter = require('./src/routes/orderRoute');
-const flagRouter = require('./src/routes/flagRoute');
-const carRouter = require('./src/routes/carRoute');
-=======
-const router = require('./server/src/routes/index');
->>>>>>> 34ba5437b34f06bea493e539578d0b491aa463ff
+const carRoute = require('./src/routes/carRoute');
+const useRoute = require('./src/routes/userRoute');
+const orderRoute = require('./src/routes/orderRoute');
+const flagRoute = require('./src/routes/flagRoute');
 
 
 // Set up the express app
@@ -18,12 +14,12 @@ const app = express();
 // Parse incoming request
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 
-app.use(userRouter);
-app.use(carRouter);
-app.use(orderRouter);
-app.use(flagRouter);
+app.use(useRoute);
+app.use(carRoute);
+app.use(orderRoute);
+app.use(flagRoute);
 
 const PORT = process.env.PORT || 3000;
 
