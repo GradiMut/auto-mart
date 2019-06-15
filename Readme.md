@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/GradiMut/auto-mart.svg?branch=master)](https://travis-ci.org/GradiMut/auto-mart)
+[![Coverage Status](https://coveralls.io/repos/github/GradiMut/auto-mart/badge.svg?branch=master)](https://coveralls.io/github/GradiMut/auto-mart?branch=master)
 # AutoMart
 
 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
@@ -65,8 +67,6 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 [AutoMart heroku link](https://automart-andele-bc7.herokuapp.com/)
 
-[![Build Status](https://travis-ci.org/GradiMut/auto-mart.svg?branch=master)](https://travis-ci.org/GradiMut/auto-mart)
-[![Coverage Status](https://coveralls.io/repos/github/GradiMut/auto-mart/badge.svg?branch=master)](https://coveralls.io/github/GradiMut/auto-mart?branch=master)
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
