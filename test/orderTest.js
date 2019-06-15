@@ -26,7 +26,7 @@ describe('Create a purchase order', () => {
       .post('/api/v1/makeAnOffer')
       .send(order)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -50,7 +50,7 @@ describe('Update price of the purchase order in pending', () => {
       .patch(`/api/v1/updateOrderPrice/${id}`)
       .send(order)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });

@@ -3,6 +3,7 @@
 /* eslint-disable class-methods-use-this */
 // jshint esversion: 6
 const carDb = require('../data/cars');
+const { validateAd, validateUpdateStatus, validatePostedPrice } = require('../middleware/validation/cars');
 
 class Car {
   // getting all the car
@@ -87,70 +88,28 @@ class Car {
 
   // Post a car
   postCar(req, res) {
-    if (!req.body.owner) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, you do not have an account',
-      });
+    const { error } = validateAd(req.body);
+    const carF = carDb.find(c => c.description === req.body.description);
+    if (carF) {
+      res.status(401).send('Items already exist');
+      return;
     }
-    if (!req.body.state) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, State is missing',
-      });
-    }
-    if (!req.body.status) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Status is missing',
-      });
-    }
-    if (!req.body.price) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Price is missing',
-      });
-    }
-    if (!req.body.make) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Manufactuure(Make) is missing',
-      });
-    }
-    if (!req.body.model) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Model is missing',
-      });
-    }
-    if (!req.body.bodyType) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Body type is missing',
-      });
-    }
-    if (!req.body.imgUrl) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, Image is missing',
-      });
-    }
-    if (!req.body.description) {
-      return res.status(400).send({
-        status: 400,
-        message: 'Failled to post, description is missing',
-      });
+
+
+    if (error) {
+      res.status(400).send(error.details[0].message);
+      return;
     }
 
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
     const car = {
       id: carDb.length + 1,
-      owner: req.body.owner,
+      owner: parseInt(req.body.owner, 10),
       state: req.body.state,
       status: req.body.status,
       createdOn: date,
-      price: req.body.price,
+      price: parseInt(req.body.price, 10),
       make: req.body.make,
       model: req.body.model,
       bodyType: req.body.bodyType,
@@ -168,6 +127,7 @@ class Car {
 
   // Update price
   updatePrice(req, res) {
+    const { error } = validatePostedPrice(req.body);
     const id = parseInt(req.params.id, 10);
     let carFound;
     let itemIndex;
@@ -177,16 +137,14 @@ class Car {
         itemIndex = index;
       }
     });
+    if (error) {
+      res.status(400).send(error.details[0].message);
+      return;
+    }
     if (!carFound) {
       return res.status(404).send({
         status: 404,
         message: 'Failed to update, car not found',
-      });
-    }
-    if (!req.body.price) {
-      return res.status(400).send({
-        success: 400,
-        message: 'Failed to update, require price',
       });
     }
 
@@ -196,7 +154,7 @@ class Car {
       state: carFound.state,
       status: carFound.status,
       createdOn: carFound.createdOn,
-      price: req.body.price || carFound.price,
+      price: parseInt(req.body.price, 10) || carFound.price,
       make: carFound.make,
       model: carFound.model,
       bodyType: carFound.bodyType,
@@ -214,6 +172,8 @@ class Car {
 
   // Mark Car as sold
   markCarAsSold(req, res) {
+    const { error } = validateUpdateStatus(req.body);
+
     const id = parseInt(req.params.id, 10);
     let carFound;
     let itemIndex;
@@ -228,6 +188,10 @@ class Car {
         status: 404,
         message: 'Failed to update, car not found',
       });
+    }
+    if (error) {
+      res.status(400).send(error.details[0].message);
+      return;
     }
 
     const newCar = {

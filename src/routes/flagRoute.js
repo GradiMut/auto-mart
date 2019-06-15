@@ -2,10 +2,10 @@
 const express = require('express');
 const reportController = require('../controllers/flagControlleer');
 
-const router = express.Router();
+const flagRouter = express.Router();
 
 // flag route
-router.get('/api/v1/getAllFlag', reportController.getAllReport);
-router.post('/api/v1/addFlag', reportController.reportAd);
+flagRouter.get('/api/v1/getAllFlag', reportController.getAllReport);
+flagRouter.post('/api/v1/addFlag', reportController.reportAd);
 
-module.exports = router;
+module.exports = flagRouter;

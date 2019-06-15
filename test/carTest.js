@@ -17,8 +17,8 @@ describe('Create a car sale ad', () => {
     const car = {
       id: 1,
       owner: 5,
-      state: 'New',
-      status: 'Available',
+      state: 'new',
+      status: 'available',
       createdOn: '2008-05-05',
       price: 100000,
       make: 'Toyota',
@@ -31,7 +31,7 @@ describe('Create a car sale ad', () => {
       .post('/api/v1/AddCar')
       .send(car)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -44,7 +44,7 @@ describe('get car by id', () => {
     chai.request(app)
       .get(`/api/v1/getCarById/${id}`)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -56,7 +56,7 @@ describe('get car by body type', () => {
     chai.request(app)
       .get('/api/v1/getCarByBodyType/toyota')
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -68,7 +68,7 @@ describe('Search car within price range and manufacture', () => {
     chai.request(app)
       .get('/api/v1/searchCarBy/available/500/1000/toyota')
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -81,7 +81,7 @@ describe('get car by status', () => {
     chai.request(app)
       .get('/api/v1/getCarByStatus/available')
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -108,7 +108,7 @@ describe('Mark car as sold', () => {
       .patch(`/api/v1/markAsSold/${id}`)
       .send(car)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
@@ -135,7 +135,7 @@ describe('Update price of the posted car', () => {
       .patch('/api/v1/updatePrice/1')
       .send(car)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(201);
         res.should.be.a('object');
         done(err);
       });
