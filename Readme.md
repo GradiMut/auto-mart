@@ -16,6 +16,7 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 ### GitHub Pages link for UI
 
 [AutoMart/UI link](https://gradimut.github.io/auto-mart/UI)
+---------------------------------------------------------------------
 
 ## API ENDPOINTS
 
@@ -54,33 +55,23 @@ Auto Mart,  can sell their cars or buy from trusted dealerships or private selle
 
 ### Testing Framework and assertion library
 
-``Mocha`` and ``Chai``
+```Mocha and Chai```
 
-### Continuous Integration
+### Deployment
 
-``Travis CI``
+```Heroku```
 
-### Test Coverage
+### Heroku link Example
 
-``nyc``
+[AutoMart heroku link](https://automart-andele-bc7.herokuapp.com/)
 
-### Git badge
-
-``coveralls``
-
-### API DOCUMENTAION link Example
-
-[``AutoMart Doc``](https://automart-andele-bc7.herokuapp.com/)
-
-### UI Page
-
-[``AutoMart UI``](https://gradimut.github.io/auto-mart/UI)
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Prerequisites
-
-- You need first to clone the repository ```https://github.com/GradiMut/auto-mart/``` or
-- download the zip file
-- [Node Package Installer - NPM] this usually comes with Node or YARN in case NPM doesn't work.```
+To install the software on your local machine, you need first to clone the repository
+ ```https://github.com/GradiMut/auto-mart/``` or download the zip file
+ [Node Package Installer - NPM] this usually comes with Node or YARN in case NPM doesn't work.```
 
 ## Installing
 
@@ -92,7 +83,7 @@ It will install the node_modules which will help you run the project on your loc
 
 ## Run the server
 
-```> nodemon app.js```
+```> npm start```
 
 ## Run the test
 
