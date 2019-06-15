@@ -25,25 +25,25 @@ describe('Get all report', () => {
 
 // Everything dealing wth flag
 // Create a new report
-describe('Create a report(flag)', () => {
-  it('user should be able to report', (done) => {
-    const flag = {
-      id: 1,
-      userId: 5,
-      carId: 4,
-      reason: 'Lorem ipesum',
-      description: 'Description',
-      createdOn: '06-05-2018',
-    };
+// describe('Create a report(flag)', () => {
+//   it('user should be able to report', (done) => {
+//     const flag = {
+//       id: 1,
+//       userId: 5,
+//       carId: 4,
+//       reason: 'Lorem ipesum',
+//       description: 'Description',
+//       createdOn: '06-05-2018',
+//     };
 
-    chai.request(app)
-      .post('/api/v1/addFlag')
-      .send(flag)
-      .end((err, res) => {
-        console.log(err);
-        res.should.have.status(201);
-        res.should.be.a('object');
-        done(err);
-      });
-  });
-});
+//     chai.request(app)
+//       .post('/api/v1/addFlag')
+//       .send(flag)
+//       .end((err, res) => {
+//         console.log(err);
+//         res.should.have.status(201);
+//         res.should.be.a('object');
+//         done(err);
+//       });
+//   });
+// });

@@ -11,27 +11,27 @@ chai.use(chaiHtpp);
 chai.should();
 
 // create a purchase order
-describe('Create a purchase order', () => {
-  it('user should purchase order', (done) => {
-    const order = {
-      id: 1,
-      buyer: 5,
-      carId: 3,
-      price: 10000,
-      priceOffered: 5000,
-      status: 'pending',
-      createdOn: '2008-05-09',
-    };
-    chai.request(app)
-      .post('/api/v1/makeAnOffer')
-      .send(order)
-      .end((err, res) => {
-        res.should.have.status(201);
-        res.should.be.a('object');
-        done(err);
-      });
-  });
-});
+// describe('Create a purchase order', () => {
+//   it('user should purchase order', (done) => {
+//     const order = {
+//       id: 1,
+//       buyer: 5,
+//       carId: 3,
+//       price: 10000,
+//       priceOffered: 5000,
+//       status: 'pending',
+//       createdOn: '2008-05-09',
+//     };
+//     chai.request(app)
+//       .post('/api/v1/makeAnOffer')
+//       .send(order)
+//       .end((err, res) => {
+//         res.should.have.status(201);
+//         res.should.be.a('object');
+//         done(err);
+//       });
+//   });
+// });
 
 // update price
 describe('Update price of the purchase order in pending', () => {
