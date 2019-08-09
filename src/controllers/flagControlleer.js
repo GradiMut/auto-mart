@@ -16,12 +16,12 @@ class Report {
   }
 
   reportAd(req, res) {
-    const { error } = validateFlag(req.body);
+    // const { error } = validateFlag(req.body);
 
-    if (error) {
-      res.status(400).send(error.details[1].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[1].message);
+    //   return;
+    // }
 
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;

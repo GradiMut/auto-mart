@@ -36,12 +36,12 @@ class User {
 
   singIn(req, res) {
     const userFound = userDb.find(e => e.email === req.body.email);
-    const { error } = validateUserSingIn(req.body);
+    // const { error } = validateUserSingIn(req.body);
 
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
     if (!userFound) {
       res.status(404).json({
         status: 404,
@@ -74,14 +74,14 @@ class User {
 
   singUp(req, res) {
     // Check user input if empty
-    const { error } = validateUserSignup(req.body);
+    // const { error } = validateUserSignup(req.body);
     // check if user exist
     const userFound = userDb.find(e => e.email === req.body.email && e.firstName === req.body.firstName);
 
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
 
     if (userFound) {
       res.status(400).send({

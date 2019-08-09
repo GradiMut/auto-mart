@@ -17,17 +17,17 @@ class Order {
 
   // make an order
   makeAnOffer(req, res) {
-    const { error } = validateOrder(req.body);
+    // const { error } = validateOrder(req.body);
     const user = userDb.find(u => u.id === req.body.buyer);
 
     if (user) {
-      res.status(400).send('You can not purchase your own car');
+      res.status(401).send('You can not purchase your own car');
       return;
     }
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
 
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;

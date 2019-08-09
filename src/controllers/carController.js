@@ -88,7 +88,7 @@ class Car {
 
   // Post a car
   postCar(req, res) {
-    const { error } = validateAd(req.body);
+    // const { error } = validateAd(req.body);
     const carF = carDb.find(c => c.description === req.body.description);
     if (carF) {
       res.status(401).send('Items already exist');
@@ -96,10 +96,10 @@ class Car {
     }
 
 
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
 
     const currentDate = new Date();
     const date = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
@@ -127,7 +127,7 @@ class Car {
 
   // Update price
   updatePrice(req, res) {
-    const { error } = validatePostedPrice(req.body);
+    // const { error } = validatePostedPrice(req.body);
     const id = parseInt(req.params.id, 10);
     let carFound;
     let itemIndex;
@@ -137,10 +137,10 @@ class Car {
         itemIndex = index;
       }
     });
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
     if (!carFound) {
       return res.status(404).send({
         status: 404,
@@ -172,7 +172,7 @@ class Car {
 
   // Mark Car as sold
   markCarAsSold(req, res) {
-    const { error } = validateUpdateStatus(req.body);
+    // const { error } = validateUpdateStatus(req.body);
 
     const id = parseInt(req.params.id, 10);
     let carFound;
@@ -189,10 +189,10 @@ class Car {
         message: 'Failed to update, car not found',
       });
     }
-    if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
-    }
+    // if (error) {
+    //   res.status(400).send(error.details[0].message);
+    //   return;
+    // }
 
     const newCar = {
       id: carFound.id,
